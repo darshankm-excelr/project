@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link   rel="stylesheet" href="code.css">
+
+</head>
+<body>
+   <div>
+<img src="" id="img" style="width: 40vh;height: 40vh;">
+    </div>
+    <button class="btn">Next</button>
+
+    <script >
+async function Dogimg(){
+    const url="https://dog.ceo/api/breeds/image/random";
+    const resp=await fetch(url);
+    const data=await resp.json();
+    console.log(data.message);
+    document.getElementById("img").src=data.message;
+}
+document.querySelector(".btn").addEventListener("click",Dogimg);            
+</script>
+   <!--<h2 id="btn">tis is nan mane</h2> 
+   <button onclick='document.getElementById("btn").style.display="block"'>click me</button>-->
+   <!--<h1 id="sw">Hi swathi</h1>
+   <input type="number" id="num" placeholder="enter the age">
+   <button id="btn">submit</button>
+   <P id="hi"> you are elligable to marriage</P>
+   <script>
+   let value= Document.getelementById("btn").innerHTML.getelementById("num");
+   document.getElementById("hi").innerHTML=value;-->
+  <!--- <button  id="sb">submit</button>
+   <button id="bt">Add </button>
+   <button id="de">Delete</button>-->
+
+   </script>
+
+   
+
+</body>
+
+</html>
